@@ -1,0 +1,77 @@
+<robot name="rover">
+<!-- <link name="base_footprint">
+    
+</link>
+-->
+    <link name="base_link">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.6 1.0 0.2"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+
+    <link name="wheel1_link">
+    <!--        <parent link="base_link"/>-->
+            <visual name="">
+    <!--            <origin xyz="0.35 0.35 0.0" rpy="${pi/2} 0.0 ${pi/2}"/> -->
+                <origin xyz="0.35 0.35 0.0" rpy="1.57 0.0 1.57"/>
+                <geometry>
+                    <cylinder radius="0.15" length="0.1"/>
+                </geometry>
+                <material name="yellow">
+                    <color rgba="1.0 1.0 0.0 1.0"/>
+                    <texture filename=""/>
+                </material>
+            </visual>
+    </link>
+        <link name="wheel2_link">
+                <visual name="">
+                    <origin xyz="-0.35 0.35 0.0" rpy="1.57 0.0 1.57"/>
+                    <geometry>
+                        <cylinder radius="0.15" length="0.1"/>
+                    </geometry>
+                    <material name="yellow">
+                        <color rgba="1.0 1.0 0.0 1.0"/>
+                        <texture filename=""/>
+                    </material>
+                </visual>
+        </link>
+            <link name="wheel3_link">
+                <visual name="">
+                    <origin xyz="-0.35 -0.35 0.0" rpy="1.57 0.0 1.57"/>
+                    <geometry>
+                        <cylinder radius="0.15" length="0.1"/>
+                    </geometry>
+                    <material name="yellow">
+                        <color rgba="1.0 1.0 0.0 1.0"/>
+                        <texture filename=""/>
+                    </material>
+                </visual>
+        </link>
+            <!--
+            <joint name="wheel_joint" type="continuous">
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <parent link="base_link"/>
+                <child link="wheel1_link"/>
+                <axis xyz="0.0 0.0 0.0"/>
+            </joint>
+            -->
+            <link name="wheel4_link">
+                <visual name="">
+                    <origin xyz="0.35 -0.35 0.0" rpy="1.57 0.0 1.57"/>
+                    <geometry>
+                        <cylinder radius="0.15" length="0.1"/>
+                    </geometry>
+                    <material name="yellow">
+                        <color rgba="1.0 1.0 0.0 1.0"/>
+                        <texture filename=""/>
+                    </material>
+                </visual>
+        </link>
+   </link>
+</robot>
