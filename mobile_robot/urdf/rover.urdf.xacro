@@ -1,4 +1,6 @@
-<robot name="rover">
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
+    
     <link name="base_footprint" />
     <link name="base_link">
         <visual name="">
@@ -21,7 +23,8 @@
     </joint>
 
     <!-- Rear right wheel. -->
-    <link name="wheel_rear_right_link">
+    <xacro:property name="side" value="front_left"/>
+    <link name="wheel_${side}_link">
         <visual name="">
     <!--            <origin xyz="0.35 0.35 0.0" rpy="${pi/2} 0.0 ${pi/2}"/> -->
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -41,10 +44,10 @@
         </collision>
     </link>
 
-    <joint name="wheel_rear_right_joint" type="continuous">
+    <joint name="wheel_${side}_joint" type="continuous">
         <origin xyz="0.35 0.35 0.0" rpy="1.57 0.0 1.57"/>
         <parent link="base_link"/>
-        <child link="wheel_rear_right_link"/>
+        <child link="wheel_${side}_link"/>
         <axis xyz="0.0 0.0 1.0"/>
     </joint>
 
@@ -76,5 +79,6 @@
         <child link="wheel_rear_left_link"/>
         <axis xyz="0.0 0.0 1.0"/>
     </joint>
+
 
 </robot>

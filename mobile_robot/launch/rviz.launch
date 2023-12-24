@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <param name="robot_description" textfile="$(find mobile_robot)/urdf/rover.urdf"/>
+    <param name="robot_description" command="xacro '$(find mobile_robot)/urdf/rover.urdf.xacro'"/>
     <arg name="rviz_config_file" default="$(find mobile_robot)/config/robot.rviz"/>
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
     <!-- <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/> -->
