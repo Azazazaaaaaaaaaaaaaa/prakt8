@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+     <!-- To include it add the following line -->
+    <!-- <xacro:include filename="example_gazebo.xacro" /> -->
+    <gazebo reference="base_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <xacro:macro name="color_wheels" params="name">
+        <gazebo reference="wheel_${name}_link">
+            <material>Gazebo/Yellow</material>
+        </gazebo>
+    </xacro:macro>
+
+    <xacro:color_wheels name="front_left"/>
+    <xacro:color_wheels name="front_right"/>
+    <xacro:color_wheels name="rear_left"/>
+    <xacro:color_wheels name="rear_right"/>
+    
+</robot>
