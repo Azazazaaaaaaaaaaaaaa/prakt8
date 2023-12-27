@@ -68,22 +68,6 @@ printenv | grep ROS
 
 roscd
 
-<img src="mobile_robot/ros_extension_settings.png">
-
-<img src="mobile_robot/ros_urdf_preview01.png">
-
-<img src="mobile_robot/ros_urdf_preview02.png">
-
-<img src="mobile_robot/ros_rviz_test01.png">
-
-<img src="mobile_robot/ros_rviz_test02.png">
-
-<img src="mobile_robot/ros_rviz_test03.png">
-
-<img src="mobile_robot/ros_rviz_test04.png">
-
-<img src="mobile_robot/ros_gazebo_test01.png">
-
 # Images for GitFlic
 
 ![commonMD](mobile_robot/ros_extension_settings.png)
