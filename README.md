@@ -1,7 +1,7 @@
 # Robot Operating System
 ROS version Noetic
 
-#Workspace
+# Workspace
 mkdir -p ~/test_ws/src
 
 cd ~/test_ws/src
