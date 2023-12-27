@@ -84,5 +84,6 @@ roscd
 
 <img src="mobile_robot/ros_gazebo_test01.png">
 
-<img src="mobile_robot/ros_gazebo_test02.png">
+![commonMD]<img src="mobile_robot/ros_gazebo_test02.png">
+![commonMD](mobile_robot/ros_gazebo_test02.png")
 
