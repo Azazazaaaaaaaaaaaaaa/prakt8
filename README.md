@@ -32,7 +32,7 @@ source devel/setup.bush
 
 roscd mobile_robot
 
-#URDF
+# URDF
 mkdir urdf
 
 mkdir launch
