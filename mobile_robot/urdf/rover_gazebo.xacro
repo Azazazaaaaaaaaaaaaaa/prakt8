@@ -17,5 +17,56 @@
     <xacro:color_wheels name="front_right"/>
     <xacro:color_wheels name="rear_left"/>
     <xacro:color_wheels name="rear_right"/>
+
+    <!-- Controller for the 4-wheeled robot -->
+    <gazebo>
+        <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+
+            <!-- Control update rate in Hz -->
+            <updateRate>100.0</updateRate>
+
+
+            <!-- Leave this empty otherwise, there will be problems with sending control commands -->
+            <robotNamespace></robotNamespace>
+
+            <!-- Robot kinematics -->
+            <leftFrontJoint>wheel_front_left_joint</leftFrontJoint>
+            <rightFrontJoint>wheel_front_right_joint</rightFrontJoint>
+            <leftRearJoint>wheel_rear_left_joint</leftRearJoint>
+            <rightRearJoint>wheel_rear_right_joint</rightRearJoint>
+            <wheelSeparation>${width+2*0.5}</wheelSeparation>
+            <wheelDiameter>${2*0.15}</wheelDiameter>
+
+            <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
+            <torque>1</torque>
+
+
+            <!-- Topic to receive geometry_msgs/Twist message commands, defaults to 'cmd_vel' -->
+            <commandTopic>cmd_vel</commandTopic>
+            <!-- Topic to publish nav_msgs/Odometry messages, defaults to 'odom' -->
+            <odometryTopic>odom</odometryTopic>
+            <!-- Odometry frame, defaulst to 'odom' -->
+            <odometryFrame>odom</odometryFrame>
+            <!-- Robot frame to calculate odometry from, defaults to 'base_footprint' -->
+            <robotBaseFrame>base_footprint</robotBaseFrame>
+            <!-- Set to true to publish transforms for the wheel links, defaults to false -->
+            <publishWheelTF>true</publishWheelTF>
+            <!-- Set to true to publish transforms for the odometry, defaults to true -->
+            <publishOdom>true</publishOdom>
+            <!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
+            <publishWheelJointState>true</publishWheelJointState>
+
+            <!-- This part is required by Gazebo -->
+            <covariance_x>0.0001</covariance_x>
+            <covariance_y>0.0001</covariance_y>
+            <covariance_yaw>0.01</covariance_yaw>
+
+        </plugin>
+    </gazebo>
     
 </robot>
+
+
+
+
+
