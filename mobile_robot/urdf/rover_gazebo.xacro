@@ -9,6 +9,8 @@
 
     <xacro:macro name="color_wheels" params="name">
         <gazebo reference="wheel_${name}_link">
+            <mu1>0.2</mu1>
+            <mu2>0.2</mu2>
             <material>Gazebo/Yellow</material>
         </gazebo>
     </xacro:macro>
