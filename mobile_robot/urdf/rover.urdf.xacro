@@ -10,6 +10,10 @@
     <xacro:property name="width"  value="0.6"/>
     <xacro:property name="height" value="0.2"/>
     <xacro:property name="depth"  value="1.0"/>
+    <xacro:property name="red"    value="1.0 0.0 0.0 1.0"/>
+    <xacro:property name="green"  value="0.0 1.0 0.0 1.0"/>
+    <xacro:property name="blue"   value="0.0 0.0 1.0 1.0"/>
+    <xacro:property name="yellow" value="1.0 1.0 0.0 1.0"/>
 
     <link name="base_link">
         <inertial>
@@ -23,7 +27,7 @@
         <visual name="">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <box size="${width} ${depth} ${height}"/>
+                <box size="${depth} ${width} ${height}"/>
             </geometry>
             <material name="red">
                 <color rgba="1.0 0.0 0.0 1.0"/>
@@ -39,7 +43,14 @@
         <axis xyz="0.0 0.0 0.0"/>
     </joint>
 
-    <xacro:macro name="wheel" params="name x y mesh angle_wheel">
+    <xacro:macro name="wheel" params="color name x y mesh angle_wheel">
+        <joint name="wheel_${name}_joint" type="continuous">
+            <parent link="base_link"/>
+            <child link="wheel_${name}_link"/>
+            <origin xyz="${x} ${y} 0.0" rpy="0.0 0.0 ${angle_wheel}"/>
+            <axis xyz="0.0 1.0 0.0"/>
+        </joint>
+
         <link name="wheel_${name}_link">
             <inertial>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -55,7 +66,7 @@
                         <mesh filename="package://mobile_robot/meshes/left_tire.stl" scale="0.005 0.005 0.005"/>
                     </geometry>
                     <material name="yellow">
-                        <color rgba="1.0 1.0 0.0 1.0"/>
+                        <color rgba="${color}"/>
                         <texture filename=""/>
                     </material>
             </visual>
@@ -67,18 +78,12 @@
                 </geometry>
             </collision>
         </link>
-        <joint name="wheel_${name}_joint" type="continuous">
-            <origin xyz="${x} ${y} 0.0" rpy="0.0 0.0 ${angle_wheel}"/>
-            <parent link="base_link"/>
-            <child link="wheel_${name}_link"/>
-            <axis xyz="0.0 1.0 0.0"/>
-        </joint>
         
     </xacro:macro>
 
-    <xacro:wheel name="front_right" x="-0.35" y="0.35" mesh="${right_wheel}" angle_wheel="${-pi/2}"/>
-    <xacro:wheel name="front_left" x="0.35" y="0.35" mesh="${left_wheel}" angle_wheel="${pi/2}"/>
-    <xacro:wheel name="rear_right" x="-0.35" y="-0.35" mesh="${right_wheel}" angle_wheel="${-pi/2}"/>
-    <xacro:wheel name="rear_left" x="0.35" y="-0.35" mesh="${left_wheel}" angle_wheel="${pi/2}"/>
+    <xacro:wheel color="${green}" name="front_right" x="0.35" y="-0.35" mesh="${right_wheel}" angle_wheel="0.0"/>
+    <xacro:wheel color="${yellow}" name="front_left" x="0.35" y="0.35" mesh="${left_wheel}" angle_wheel="0.0"/>
+    <xacro:wheel color="${blue}" name="rear_right" x="-0.35" y="-0.35" mesh="${right_wheel}" angle_wheel="0.0"/>
+    <xacro:wheel color="${red}" name="rear_left" x="-0.35" y="0.35" mesh="${left_wheel}" angle_wheel="0.0"/>
     <xacro:include filename="$(find mobile_robot)/urdf/rover_gazebo.xacro"/>
 </robot>
