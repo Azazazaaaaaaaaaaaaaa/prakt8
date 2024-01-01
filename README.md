@@ -173,3 +173,8 @@ Ctrl + L - clear console.
 ![commonMD](mobile_robot/ros_gazebo_test01.png)
 
 ![commonMD](mobile_robot/ros_gazebo_test02.png)
+
+# Hyperlinks
+
+[youtube.com - ROS Wiki Demonstrations](https://www.youtube.com/playlist?list=PLBbhfIdh4NdgBBkX7q0Y3UukO2_ZoICee) 
+Muhammad Luqman 13 videos - 24,361 views - Last updated on Apr 26, 2023
