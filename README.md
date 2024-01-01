@@ -107,6 +107,9 @@ cd ~/catkin_ws/src/mobile_robot/src
 touch test_publisher.py
 '''
 '''
+chmod +x test_publisher.py
+'''
+'''
 rosrun mobile_robot test_publisher.py
 '''
 
