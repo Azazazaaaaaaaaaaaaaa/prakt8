@@ -1,7 +1,7 @@
 # Robot Operating System
 ROS version Noetic
 
-![commonMD](mobile_robot/ros_gazebo_test02.png)
+![XACRO model with STL-wheels in Gazebo](mobile_robot/ros_gazebo_test02.png)
 
 # Workspace
 mkdir -p ~/test_ws/src
@@ -46,72 +46,72 @@ cd ~/test_ws
 code .
 
 # RViz And Gazebo
-'''
+```
 cd ~/catkin_ws/src/mobile_robot
-'''
-'''
+```
+```
 mkdir launch
-'''
-'''
+```
+```
 cd launch
-'''
-'''
+```
+```
 touch rviz.launch
-'''
-'''
+```
+```
 touch gazebo.launch
-'''
-'''
+```
+```
 roslaunch mobile_robot rviz.launch
-'''
-'''
+```
+```
 roslaunch mobile_robot gazebo.launch
-'''
+```
 
 # Keyboard Teleoperations
-'''
+```
 sudo apt update
-'''
-'''
+```
+```
 sudo apt install ros-noetic-teleop-twist-keyboard
-'''
-'''
+```
+```
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-'''
+```
 
 # Topics And Nodes Works
 rqt / Plugins / Message Publisher
 
 rqt / Plugins / Robot Tools / Robot Steering
-'''
+```
 rosnode list
-'''
-'''
+```
+```
 rostopic list
-'''
-'''
+```
+```
 rostopic pub /cmd_vel
-'''
-'''
+```
+```
 rostopic echo /cmd_vel
-'''
-'''
+```
+```
 rostopic echo /odom
-'''
+```
 
 # Python Scripts
-'''
+```
 cd ~/catkin_ws/src/mobile_robot/src
-'''
-'''
+```
+```
 touch test_publisher.py
-'''
-'''
+```
+```
 chmod +x test_publisher.py
-'''
-'''
+```
+```
 rosrun mobile_robot test_publisher.py
-'''
+```
 
 
 
@@ -140,16 +140,16 @@ roscd
 
 # Linux Console 
 ### Disable Auto Logout Screen
-'''
+```
 xfce4-screensaver-preferences
-'''
+```
 ![commonMD](mobile_robot/xubuntu_lockscreen_off.png)
 ### Colors In Console
 Consoles tty1, tty2, ..., tty6
 Ctrl + F1, Ctrl + F2, ..., 
-'''
+```
 setterm --background white --foreground black --store
-'''
+```
 Ctrl + L - clear console.
 ### Colors In Terminal Emulator Of Xubuntu
 ![commonMD](mobile_robot/xubuntu_colors_terminal.png)
