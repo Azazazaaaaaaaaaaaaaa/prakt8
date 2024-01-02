@@ -3,7 +3,7 @@
     <param name="robot_description" command="xacro '$(find mobile_robot)/urdf/rover.urdf.xacro'"/>
     <arg name="rviz_config_file" default="$(find mobile_robot)/config/robot.rviz"/>
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
-    <!-- <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/> -->
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
     <!-- <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui"/> -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <!-- <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds"/> -->
@@ -11,5 +11,6 @@
     </include>    
     
     <node name="spawning_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model rover -param robot_description"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_config_file)"/>
     
 </launch>
