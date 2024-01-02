@@ -176,5 +176,7 @@ Ctrl + L - clear console.
 
 # Hyperlinks
 
-[youtube.com - ROS Wiki Demonstrations](https://www.youtube.com/playlist?list=PLBbhfIdh4NdgBBkX7q0Y3UukO2_ZoICee) 
+1. [youtube.com - ROS Wiki Demonstrations](https://www.youtube.com/playlist?list=PLBbhfIdh4NdgBBkX7q0Y3UukO2_ZoICee) 
 Muhammad Luqman 13 videos - 24,361 views - Last updated on Apr 26, 2023
+
+1. [wikipedia.org - List of moments of inertia](https://en.wikipedia.org/wiki/List_of_moments_of_inertia)
