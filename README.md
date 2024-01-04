@@ -67,7 +67,14 @@ roslaunch mobile_robot rviz.launch
 ```
 roslaunch mobile_robot gazebo.launch
 ```
-
+# Gazebo Worlds
+```
+echo $GAZEBO_MODEL_PATH
+```
+```
+export GAZEBO_MODEL_PATH=~/catkin_ws/src/mobile_robot/models:$GAZEBO_MODEL_PATH
+```
+![Gazebo: world model Collada with texture](mobile_robot/gazebo_world_test01.png)
 # Keyboard Teleoperations
 ```
 sudo apt update
@@ -176,7 +183,9 @@ Ctrl + L - clear console.
 
 # Hyperlinks
 
-1. [youtube.com - ROS Wiki Demonstrations](https://www.youtube.com/playlist?list=PLBbhfIdh4NdgBBkX7q0Y3UukO2_ZoICee) 
+1. [youtube.com&nbsp;&mdash;  ROS Wiki Demonstrations](https://www.youtube.com/playlist?list=PLBbhfIdh4NdgBBkX7q0Y3UukO2_ZoICee) 
 Muhammad Luqman 13 videos - 24,361 views - Last updated on Apr 26, 2023
 
-1. [wikipedia.org - List of moments of inertia](https://en.wikipedia.org/wiki/List_of_moments_of_inertia)
+1. [wikipedia.org&nbsp;&mdash;  List of moments of inertia](https://en.wikipedia.org/wiki/List_of_moments_of_inertia)
+
+1. [youtube.com - How to create terrain for Gazebo simulation with Blender 2.9](https://www.youtube.com/watch?v=GNbH8Pf7nGk)&nbsp;&mdash; Kevin DeMarco 132 subscribers 5,100 views  Dec 7, 2021

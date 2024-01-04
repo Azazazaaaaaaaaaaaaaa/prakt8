@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="block4">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="body">
+      <visual name="visual">
+        <geometry>
+            <mesh>
+                <uri>model://block4/media/block4.dae</uri>
+            </mesh>
+        </geometry>
+	    <material>
+          <script>
+            <uri>model://block4/media/scripts</uri>
+            <uri>model://block4/media/textures</uri>
+            <name>test/block4</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+            <mesh>
+                <uri>model://block4/media/block4.dae</uri>
+            </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

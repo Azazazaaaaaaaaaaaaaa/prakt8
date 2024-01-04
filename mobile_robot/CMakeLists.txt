@@ -8,10 +8,16 @@ project(mobile_robot)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  gazebo_ros
   rospy
   std_msgs
 )
 
+
+set(ENV{GAZEBO_MODEL_PATH} "$ENV{GAZEBO_MODEL_PATH}:${CMAKE_SOURCE_DIR}/mobile_robot/models")
+message("!!! Test Test Test $ENV{HOME}")
+message("!!! Test Test Test $ENV{GAZEBO_MODEL_PATH}")
+# message("!!! Test Test CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}")
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -190,6 +196,18 @@ include_directories(
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+
+install(DIRECTORY launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(DIRECTORY models
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(DIRECTORY worlds
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 
 #############
 ## Testing ##

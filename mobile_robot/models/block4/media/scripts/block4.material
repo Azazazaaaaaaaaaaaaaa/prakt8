@@ -1,0 +1,17 @@
+material test/block4
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture block_redspots.png
+        filtering none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
