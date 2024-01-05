@@ -183,6 +183,8 @@ Ctrl + L - clear console.
 
 # Hyperlinks
 
+1. [ROS Noetic with Ubuntu 20.04 Focal ](https://github.com/CopterExpress/clover_vm/releases/tag/v1.4) virtual machine image (.ova file, 5.3G) from Copter Express, qudrocopter Clover simulation.
+
 1. [youtube.com&nbsp;&mdash;  ROS Wiki Demonstrations](https://www.youtube.com/playlist?list=PLBbhfIdh4NdgBBkX7q0Y3UukO2_ZoICee) 
 Muhammad Luqman 13 videos - 24,361 views - Last updated on Apr 26, 2023
 
