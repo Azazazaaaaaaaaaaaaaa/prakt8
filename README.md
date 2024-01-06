@@ -75,6 +75,7 @@ echo $GAZEBO_MODEL_PATH
 export GAZEBO_MODEL_PATH=~/catkin_ws/src/mobile_robot/models:$GAZEBO_MODEL_PATH
 ```
 ![Gazebo: world model Collada with texture](mobile_robot/gazebo_world_test01.png)
+![Gazebo: rover in world with block4.dae model and window rqt with Robot Steering plugin.](mobile_robot/gazebo_world_test02.png)
 # Keyboard Teleoperations
 ```
 sudo apt update
