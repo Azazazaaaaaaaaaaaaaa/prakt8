@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="lighthouse4">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="body">
+      <visual name="visual">
+        <geometry>
+            <mesh>
+                <uri>model://lighthouse4/media/lighthouse4.dae</uri>
+            </mesh>
+        </geometry>
+	    <material>
+          <script>
+            <uri>model://lighthouse4/media/scripts</uri>
+            <uri>model://lighthouse4/media/textures</uri>
+            <name>test/lighthouse4</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+            <mesh>
+                <uri>model://lighthouse4/media/lighthouse4.dae</uri>
+            </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
