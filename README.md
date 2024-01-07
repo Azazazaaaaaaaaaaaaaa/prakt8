@@ -79,6 +79,9 @@ export GAZEBO_MODEL_PATH=~/catkin_ws/src/mobile_robot/models:$GAZEBO_MODEL_PATH
 ![Gazebo: rover in world with block4.dae model and window rqt with Robot Steering plugin.](mobile_robot/gazebo_world_test02.png)
 
 ![Gazebo: Lighthouse in world and window rqt with Robot Steering plugin.](mobile_robot/gazebo_world_test03.png)
+
+![Gazebo: Lighthouse corrected in Blender - fill bottom and rotated normals outside.](mobile_robot/gazebo_world_test04.png)
+
 # Keyboard Teleoperations
 ```
 sudo apt update
