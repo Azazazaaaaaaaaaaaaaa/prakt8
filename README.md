@@ -82,6 +82,8 @@ export GAZEBO_MODEL_PATH=~/catkin_ws/src/mobile_robot/models:$GAZEBO_MODEL_PATH
 
 ![Gazebo: Lighthouse corrected in Blender - fill bottom and rotated normals outside.](mobile_robot/gazebo_world_test04.png)
 
+![Gazebo: Lighthouse full backing texture.](mobile_robot/gazebo_world_test05.png)
+
 # Keyboard Teleoperations
 ```
 sudo apt update
