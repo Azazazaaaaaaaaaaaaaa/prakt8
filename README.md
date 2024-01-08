@@ -84,6 +84,12 @@ export GAZEBO_MODEL_PATH=~/catkin_ws/src/mobile_robot/models:$GAZEBO_MODEL_PATH
 
 ![Gazebo: Lighthouse full backing texture.](mobile_robot/gazebo_world_test05.png)
 
+# Camera Sensor Simulated
+
+![Gazebo: camera on rover.](mobile_robot/gazebo_camera_test01.png)
+
+![RViz: camera on rover.](mobile_robot/rviz_camera_test01.png)
+
 # Keyboard Teleoperations
 ```
 sudo apt update
@@ -200,3 +206,8 @@ Muhammad Luqman 13 videos - 24,361 views - Last updated on Apr 26, 2023
 1. [wikipedia.org&nbsp;&mdash;  List of moments of inertia](https://en.wikipedia.org/wiki/List_of_moments_of_inertia)
 
 1. [youtube.com - How to create terrain for Gazebo simulation with Blender 2.9](https://www.youtube.com/watch?v=GNbH8Pf7nGk)&nbsp;&mdash; Kevin DeMarco 132 subscribers 5,100 views  Dec 7, 2021
+
+1. [youtube.com - 6 Adding simulated camera to our Simple Robot using gazebo plugins](https://www.youtube.com/watch?v=y3BtDaFIGm8)&nbsp;&mdash;  
+ِAbdalrahman M. Amer 599 subscribers 7,858 views  Feb 6, 2019
+
+1. [Gazebo  : Tutorial : Gazebo plugins in ROS - Camera](https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#Camera)
