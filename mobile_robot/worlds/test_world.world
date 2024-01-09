@@ -19,5 +19,10 @@
             <uri>model://lighthouse4</uri>
             <pose>-3.0 0.0 0.0 0.0 0.0 0.0</pose>
         </include>
+        <include>
+            <name>lighthouse4</name>
+            <uri>model://lighthouse4</uri>
+            <pose>4.0 0.0 0.0 0.0 0.0 0.0</pose>
+        </include>
     </world>
 </sdf>

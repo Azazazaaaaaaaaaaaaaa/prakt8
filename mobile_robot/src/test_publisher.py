@@ -14,18 +14,19 @@ if __name__=="__main__":
     print(f"pub: {pub}")
     print(f"rover_cmd: \n{rover_cmd}")
 
-    vel_x = 0.5
-    yaw = 0.3
+    vel_x = 0.00
+    vel_y = 0.50
+    yaw = 1.0
 
     try:
         while not rospy.is_shutdown():
-            rover_cmd.linear.x = 0.5
-            rover_cmd.linear.y = 0.0
+            rover_cmd.linear.x = vel_x
+            rover_cmd.linear.y = vel_y
             rover_cmd.linear.z = 0.0
 
             rover_cmd.angular.x = 0.0
             rover_cmd.angular.y = 0.0
-            rover_cmd.angular.z = 0.3
+            rover_cmd.angular.z = yaw
 
             pub.publish(rover_cmd)
 

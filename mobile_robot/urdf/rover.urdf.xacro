@@ -103,7 +103,11 @@
             <geometry>
                 <box size="${cameraSize} ${cameraSize} ${cameraSize}"/>
             </geometry>
-            <material name="green"/>
+            <!-- <material name="green"/> -->
+            <material name="green">
+                <color rgba="0.0 1.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
         </visual>
 
         <inertial>
@@ -116,7 +120,7 @@
 
     <joint name="camera_joint" type="fixed">
         <axis xyz="0 1 0" />
-        <origin xyz="0.45 0.0 0.12" rpy="0 0 0"/>
+        <origin xyz="0.47 0.0 0.12" rpy="0 0 0"/>
         <parent link="base_link"/>
         <child link="camera_link"/>
     </joint>
